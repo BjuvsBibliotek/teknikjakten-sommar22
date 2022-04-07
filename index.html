@@ -131,7 +131,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-        <div class="intro-heading text-uppercase textbox">TESTJAKT</div>
+        <div class="intro-heading text-uppercase textbox">TEKNIKJAKTEN 2022</div>
           <!---<div class="intro-lead-in">ÄNDRA: lägg till undertitel om du vill</div>-->
           
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">
@@ -160,16 +160,16 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
             <img src="./img/bildensnamn.filformat">
             T.ex: <img src="./img/coolbild.jpeg">-->
 
-            <p>Jag har ett uppdrag åt er. Har ni vad som krävs?</p>
+            <!--<p>Jag har ett uppdrag åt er. Har ni vad som krävs?</p>
 
             <br />
-            <br />
-            <h3>När stänger biblioteket på måndagar?</h3>
+            <br />-->
+            <h3>Jag har ett uppdrag åt er. Har ni vad som krävs?</h3>
             <!--Här nedan beskriver du vad uppdraget skall vara-->
-            <p>
+            <!--<p>
             Det pågår något skumt på Bjuvs bibliotek efter stängningstid. Kanske är bibliotekarierna inblandade.
             Ta reda på när biblioteket stänger på måndagar utan att väcka deras misstankar.
-            </p>
+            </p>-->
           </div>
         </div>
       </div>
@@ -183,7 +183,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Svar</h2>
-            <h3 class="section-subheading text-muted">Svara på frågan för att ta dig vidare</h3>
+            <h3 class="section-subheading text-muted" id="moveOn">Svara på frågan för att ta dig vidare</h3>
           </div>
         </div>
         <div class="row">
@@ -197,26 +197,29 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
       Vi kan fortsätta på detta viset och lägga till nya sidor tills dess att vi skapat
       så många uppdrag vi vill.
       -->
-            <form id="contactForm" name="sentMessage" novalidate="novalidate" 
-            action="./2.html" 
+
+            <form id="radioForm" novalidate="novalidate" 
+            action="./tavla.html" 
             onsubmit="return validateForm()" autocomplete="off">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input class="form-control" id="answer" type="text" placeholder="Skriv ditt svar här" required="required" data-validation-required-message="Rutan får inte vara tom">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Skicka ditt svar</button>
-                </div>
+              <div class="col-lg-12 text-center">
+                <input type="radio" id="one" name="alternativ" value="yes" checked="checked">
+                <label for="one" style="color:white; font-size:16px;">Ja</label><br/>
+
+                <input type="radio" id="two" name="alternativ" value="no">
+                <label for="two" style="color:white; font-size:16px;">Nej</label><br/>
+
+                <br/><br/>
               </div>
-            
-          </div></form>
+              
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Skicka ditt svar</button>
+              </div>
+            </form>   
+          </div>
         </div>
       </div>
-    </div></section>
+    </section>
 
     <!-- DENNA DEL BESKRIVER INFORMATIONEN SOM VISAS LÄNGST NER PÅ SIDAN -->
     <footer>
@@ -248,40 +251,12 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
     <script>
     function validateForm() {
 
-      //Det använder skriver i rutan hämtas in och sparas i en variabel som heter answer.
-      //det man skrivit in i rutan konverteras automatiskt till gemener.
-      //Skriver någon in MeDDelande och då använder versaler kommer texten som sparas att ändå att bli meddelande.
-      //Det gör det lättare att berätta vilket alteranativ som är rätt eftersom
-      //vi inte behöver ta hänsyn till gemenser/versaler.
-      var answer = document.forms["contactForm"]["answer"].value.toLowerCase();
-      
-      /*Genom att ändra det som står mellan dessa tecken "" kan du välja vad som är rätt svar 
-      Viktigt! Skriv svaret med små bokstäver.
-
-      EX: if (answer == "mittsvar")
-
-      Om man nu skriver in mittsvar i rutan kommer man vidare.
-      
-      Finns det fler än ett rätt svar? 
-
-      Genom att lägga till följande tecken || (markera texten och kopiera 
-      eller tryck alt-gr samtidigt som du trycker på tangenten till höger om shift)
-      så kan du lägga till fler alternativ som är rätt.
-
-      EX: Med två räta svar
-
-      if (answer == "svar1" || answer == "svar2" )
-      
-      EX: Med tre rätta svar
-
-      if (answer == "svar1" || answer == "svar2" answer == "svar3" )
-      */
-
-      if (answer == "sju" || answer == "19" || answer == "19.00" || answer == "7" || answer == "19:00") { /*Kom ihåg att svaret skall skrivas med gemener*/
+      /*Validera svaret på fråga med alternativ. Endast ett alternativ kan väljas åt gången,
+      och endast ett svar är rätt. Övriga svar genererar ett felmeddelande i rött. */
+      if (document.forms["radioForm"]["alternativ"].value == "yes") {
           return true;
       }else{
-        document.getElementById("answer").value ="";
-        document.getElementById("answer").setAttribute("placeholder","Hmm, det stämmer inte... Försök igen!");
+        document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>...Om du inte är redo, vad gör du då här?</h3>";
         return false;
       }
     }

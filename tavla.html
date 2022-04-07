@@ -77,7 +77,7 @@ Du behöver sedan ändra ett saker på varje sida.
         <div class="row">
           <div class="col-lg-12 text-center">
             <!--Sidans största rubrik-->
-            <h2 class="section-heading text-uppercase">Allt är möjligt</h2>
+            <h2 class="section-heading text-uppercase">Helt uppåt väggarna</h2>
 
             <!--Bakgrundsinformation-->
             <!--<h3>På alla bilderböcker sitter det en färgglad klisterlapp i övre kanten. Det finns flera olika färger. Kan det vara någon slags kod?</h3>-->
@@ -91,13 +91,17 @@ Du behöver sedan ändra ett saker på varje sida.
             <br>
             <br>
             <!--Uppgiftens nummer-->
-            <h3>Testfråga med alternativ</h3>
+            <h3>Vilket rum hänger den här tavlan i?</h3>
             <!--Vilket är uppdraget?-->
             <br>
             <br>
 
             <p>
-              lorem ipsum dolor sit amet...
+              Det här är en bild på en del av en tavla som hänger
+              någonstans på Bjuvs bibliotek. I vilket rum kan du hitta den?
+              <br/>
+
+              <img src="./img/tavla.jpg" alt="Svartvitt foto av gruvvagnar" width="60%" height="60%">
 
             <!--Ibland kanske du vill lägga till en bild i beskrivningen.
             I så fall läger du in bilden i katalogen img.
@@ -142,13 +146,13 @@ Du behöver sedan ändra ett saker på varje sida.
             onsubmit="return validateForm()" autocomplete="off">
               <div class="col-lg-12 text-center">
                 <input type="radio" id="one" name="alternativ" value="alt1" checked="checked">
-                <label for="one" style="color:white; font-size:16px;">1. alternativ 1</label><br/>
+                <label for="one" style="color:white; font-size:16px;">1. Faktarummet</label><br/>
 
                 <input type="radio" id="two" name="alternativ" value="alt2">
-                <label for="two" style="color:white; font-size:16px;">2. alternativ 2</label><br/>
+                <label for="two" style="color:white; font-size:16px;">2. Tidskriftsrummet</label><br/>
 
                 <input type="radio" id="three" name="alternativ" value="alt3">
-                <label for="three" style="color:white; font-size:16px;">3. alternativ 3</label><br/>
+                <label for="three" style="color:white; font-size:16px;">3. Bjuvsrummet</label><br/>
                 <br/><br/>
               </div>
               
@@ -189,36 +193,13 @@ Du behöver sedan ändra ett saker på varje sida.
     <script>
     function validateForm() {
 
-      //Det använder skriver i rutan hämtas in och sparas i en variabel som heter answer.
-      //var answer = document.forms.radioForm.alternativ.value();
-      
-      /*Genom att ändra det som står mellan dessa tecken "" kan du välja vad som är rätt svar 
-      Viktigt! Skriv svaret med små bokstäver.
-
-      EX: if (answer == "mittsvar")
-
-      Om man nu skriver in mittsvar i rutan kommer man vidare.
-      
-      Finns det fler än ett rätt svar? 
-
-      Genom att lägga till följande tecken || (markera texten och kopiera 
-      eller tryck alt-gr samtidigt som du trycker på tangenten till höger om shift)
-      så kan du lägga till fler alternativ som är rätt.
-
-      EX: Med två rätta svar
-
-       if (answer == "svar1" || answer == "svar2" )
-      
-      EX: Med tre rätta svar
-
-      if (answer == "svar1" || answer == "svar2" answer == "svar3" )
-
-      */
+      /*Validera svaret på fråga med alternativ. Endast ett alternativ kan väljas åt gången,
+      och endast ett svar är rätt. Övriga svar genererar ett felmeddelande i rött. */
 
       if (document.forms["radioForm"]["alternativ"].value == "alt3") {
           return true;
       }else{
-        document.getElementById("moveOn").innerHTML = "<h3 style=color:red>Fel, försök igen</h3>";
+        document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>Fel, titta efter igen.</h3>";
         return false;
       }
     }
