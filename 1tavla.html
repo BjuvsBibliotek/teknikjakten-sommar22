@@ -50,7 +50,8 @@ Du behöver sedan ändra ett saker på varje sida.
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Teknikjakten på Bjuvs bibliotek</a>
 
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
@@ -81,14 +82,15 @@ Du behöver sedan ändra ett saker på varje sida.
             <br/>
             <br/>
             <!--Frågan-->
-            <h3>Vilket rum hänger den här tavlan i?</h3>
+            <h3 class="question">Vilket rum hänger den här tavlan i?</h3>
             <br/>
             <br/>
 
             <!--Förklarande text till frågan-->
             <p>
-              Det här är en bild på en del av en tavla som hänger
-              någonstans på Bjuvs bibliotek. I vilket rum kan du hitta den?
+              Hur bra hittar du i byggnaden? Det här är en bild på en del av en
+              tavla som hänger någonstans på Bjuvs bibliotek.
+              I vilket rum kan du hitta den?
               <br/>
 
               <img src="./img/tavla.jpg" alt="Svartvitt foto av gruvvagnar" width="60%" height="60%">
@@ -111,22 +113,13 @@ Du behöver sedan ändra ett saker på varje sida.
         <div class="row">
           <div class="col-lg-12">
 
-      <!--VILKEN SIDA SKALL LADDAS OM MAN SKRIVIT IN RÄTT SVAR
-      Du behöver här berätta vilken sida som skall laddas om man löser uppdraget.
-      Just nu är det sidan som heter 2.html som skall laddas.
-      Om vi istället skulle arbeta med uppdrag 2 just så och ändra i filen 2.html skulle vi då alltså
-      istället låta det stå 3.html eftersom det då är den sidan som borde laddas.
-      Om detta är sista uppdraget i din jakt skriver du in klar.html
-
-      Vi kan fortsätta på detta viset och lägga till nya sidor tills dess att vi skapat
-      så många uppdrag vi vill.
-      -->
+      <!--VILKEN SIDA SKALL LADDAS OM MAN SKRIVIT IN RÄTT SVAR-->
             <form id="radioForm" novalidate="novalidate" 
-            action="./knubb.html" 
+            action="./2knubbDjur.html" 
             onsubmit="return validateForm()" autocomplete="off">
               <div class="col-lg-12 text-center">
                 <input type="radio" id="one" name="alternativ" value="alt1" checked="checked">
-                <label for="one" style="color:white; font-size:16px;">1. Faktarummet</label><br/>
+                <label for="one" style="color:white; font-size:16px;">1. Faktarummet för vuxna</label><br/>
 
                 <input type="radio" id="two" name="alternativ" value="alt2">
                 <label for="two" style="color:white; font-size:16px;">2. Tidskriftsrummet</label><br/>
@@ -184,28 +177,5 @@ Du behöver sedan ändra ett saker på varje sida.
       }
     }
   </script>
-
-  <!--GRATTIS Du har nu gjort uppdrag nummer två!
-  Du har nu skapat en mall för en uppdragssida att utgå från.
-  Vill du t.ex. skapa en teknikjakt med kan du kopiera 
-  dokument och döpa kopian till 3.html. Du kan sedan upprepa samma tillvägagångssätt
-  fler gånger och du vill skapa en jakt med fler uppdrag.
-
-  3.html
-
-  Du går sedan igenom dessa kopior på samma vis som detta dokument.
-
-
-  Så avslutar du jakten.
-
-  Du avslutar jakten genom att säga att man skall hamna på sidan
-  klar.html om man skriver in rätt svar.
-
-  EX: 
-            action="./klar.html" 
-
-  Du hittar fler instruktioner här ovan under delen som heter
-  VILKEN SIDA SKALL LADDAS OM SKRIVIT IN RÄTT SVAR
-  -->
 </body>
 </html>

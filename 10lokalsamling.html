@@ -21,7 +21,7 @@ Du behöver sedan ändra ett saker på varje sida.
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
   <!--
   # Genom att ändra denna informationen nedan kan du ge jakten ett eget namn
   # EX: <title>Ett helt eget namn</title>
@@ -50,7 +50,8 @@ Du behöver sedan ändra ett saker på varje sida.
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Teknikjakten på Bjuvs bibliotek</a>
 
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
@@ -77,27 +78,22 @@ Du behöver sedan ändra ett saker på varje sida.
         <div class="row">
           <div class="col-lg-12 text-center">
             <!--Sidans största rubrik-->
-            <h2 class="section-heading text-uppercase">En hemlig kod</h2>
+            <h2 class="section-heading text-uppercase">Helt uppåt väggarna</h2>
             <br/>
             <br/>
             <!--Frågan-->
-            <h3>Vilka bokstäver står längst ner på knubben för Vilda Djur?</h3>
+            <h3 class="question">Vilket rum hänger den här tavlan i?</h3>
             <br/>
             <br/>
 
             <!--Förklarande text till frågan-->
             <p>
-            Detta kallas för en knubb och den används för att visa information om böckerna som står till höger om den.
-            Det kan vara att författarens efternamn börjar på en viss bokstav, eller att böckerna är skrivna på ett
-            annat språk, eller att de handlar om ett visst ämne - som knubben på bilden. Gå till barnfaktarummet och
-            leta upp knubben för Vilda Djur. Längst ner där det står "uRb" och "uRbz" på bilden står det något annat.
-            Vilka bokstäver är det? Det är viktigt att skriva in dem i rätt ordning.
+              Hur bra hittar du i byggnaden? Det här är en bild på en del av en
+              tavla som hänger någonstans på Bjuvs bibliotek.
+              I vilket rum kan du hitta den?
+              <br/>
 
-            <br/>
-            <br/>
-            <img src="./img/knubb.jpg" alt="Bild på knubb som brukar stå mellan böckerna i en hylla för att markera en ny bokstav eller ett nytt ämne"
-            width="60%" height="60%"/>
-            
+              <img src="./img/tavla.jpg" alt="Svartvitt foto av gruvvagnar" width="60%" height="60%">
             </p>
           </div>
         </div>
@@ -118,22 +114,26 @@ Du behöver sedan ändra ett saker på varje sida.
           <div class="col-lg-12">
 
       <!--VILKEN SIDA SKALL LADDAS OM MAN SKRIVIT IN RÄTT SVAR-->
-            <form id="contactForm" name="sentMessage" novalidate="novalidate" 
-            action="./klar.html" 
+            <form id="radioForm" novalidate="novalidate" 
+            action="./2knubbDjur.html" 
             onsubmit="return validateForm()" autocomplete="off">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input class="form-control" id="answer" type="text" placeholder="Skriv ditt svar här" required="required" data-validation-required-message="Rutan får inte vara tom">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Skicka ditt svar</button>
-                </div>
+              <div class="col-lg-12 text-center">
+                <input type="radio" id="one" name="alternativ" value="alt1" checked="checked">
+                <label for="one" style="color:white; font-size:16px;">1. Faktarummet för vuxna</label><br/>
+
+                <input type="radio" id="two" name="alternativ" value="alt2">
+                <label for="two" style="color:white; font-size:16px;">2. Tidskriftsrummet</label><br/>
+
+                <input type="radio" id="three" name="alternativ" value="alt3">
+                <label for="three" style="color:white; font-size:16px;">3. Bjuvsrummet</label><br/>
+                <br/><br/>
               </div>
-            
+              
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Skicka ditt svar</button>
+              </div>
+
           </div></form>
         </div>
       </div>
@@ -150,6 +150,7 @@ Du behöver sedan ändra ett saker på varje sida.
               </a>
             </span>
           </div>
+          
         </div>
       </div>
     </footer>
@@ -165,13 +166,12 @@ Du behöver sedan ändra ett saker på varje sida.
     <script>
     function validateForm() {
 
-      var answer = document.forms["contactForm"]["answer"].value.toLowerCase();
+      /*Validera svaret på fråga med alternativ. Endast ett alternativ kan väljas åt gången,
+      och endast ett svar är rätt. Övriga svar genererar ett felmeddelande i rött. */
 
-      if (answer == "uug") {
+      if (document.forms["radioForm"]["alternativ"].value == "alt3") {
           return true;
       }else{
-        document.getElementById("answer").value ="";
-        document.getElementById("answer").setAttribute("placeholder","Hmm, det här stämmer inte. Försök igen!");
         document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>Fel, titta efter igen.</h3>";
         return false;
       }

@@ -104,7 +104,8 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
         <a class="navbar-brand js-scroll-trigger" href="http://www.itbib.se/teknikjakten/#page-top">
         Teknikjakt på Bjuvs bibliotek
         </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
@@ -130,7 +131,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
       <div class="container">
         <div class="intro-text">
         <div class="intro-heading text-uppercase textbox">Sommar 2022</div>
-          <div class="intro-lead-in">Teknikjakten</div>
+          <div class="intro-lead-in textbox">Teknikjakten</div>
           
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">
           Starta jakten!
@@ -150,7 +151,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
             <br/>
            
             <!--Frågan-->
-            <h3>Jag har ett uppdrag åt er. Har ni vad som krävs?</h3>
+            <h3 class="question">Jag har ett uppdrag åt dig. Har du vad som krävs?</h3>
             <!--Förklarande text till frågan-->
             <!--<p>
             Det pågår något skumt på Bjuvs bibliotek efter stängningstid. Kanske är bibliotekarierna inblandade.
@@ -175,7 +176,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
 
       <!--VILKEN SIDA SKALL LADDAS OM MAN SVARAT RÄTT-->
             <form id="radioForm" novalidate="novalidate" 
-            action="./tavla.html" 
+            action="./1tavla.html" 
             onsubmit="return validateForm()" autocomplete="off">
               <div class="col-lg-12 text-center">
                 <input type="radio" id="one" name="alternativ" value="yes" checked="checked">
@@ -229,7 +230,8 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
       if (document.forms["radioForm"]["alternativ"].value == "yes") {
           return true;
       }else{
-        document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>...Om du inte är redo, vad gör du då här?</h3>";
+        document.getElementById("moveOn").innerHTML = 
+        "<h3 class=section-subheading text-muted style=color:red>...Om du inte är redo, vad gör du då här?</h3>";
         return false;
       }
     }

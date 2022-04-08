@@ -1,0 +1,210 @@
+<!--
+SKAPA EN EGEN MALLSIDA FÖR UPPDRAG
+==========================================================
+Nu blir det lite repetition. Den sida hu hintills arbetet med 
+introducerade jakten och hade därför lite speciellt innehåll.
+
+Målet med den sida du arbetar med just nu är att skapa en
+mall som du sedan kan kopiera till så många uppdrag du behöver.
+Du behöver sedan ändra ett saker på varje sida.
+
+1. Beskrivningen av uppdraget.
+2. Uppgiftens nummer
+3. Vad det rätta svaret är
+4. Vilken sida som skall laddas om man svarar rätt.
+-->
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+  <!--
+  # Genom att ändra denna informationen nedan kan du ge jakten ett eget namn
+  # EX: <title>Ett helt eget namn</title>
+  # Informationen visas inte någonstans på webbsidan utan ändrar det namn som 
+  # webbsidans flik/tabb har då du du surfar till sidan.
+  # 
+  -->
+    <title>Teknikjakten Bjuvs bibliotek</title>
+
+  <!--Filer som berättar hur sidan skall se ut laddas in. Här behöver vi inte ändra något-->
+  
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+
+  <body id="page-top">
+  <!-- Denna del av koden berättar vad menyn skall innehålla -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Teknikjakten på Bjuvs bibliotek</a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://www.itbib.se/teknikjakten/om.html">Så använder du
+             teknikjakten</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="http://www.itbib.se/teknikjakten/om.html">Om teknikjakten</a>
+            </li> 
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--SLUT PÅ DELEN SOM BESKRIVER MENYN LÄNGST UPP-->
+
+    <!-- DELEN SOM BESKRIVER FÖRSTA UPPDRAGET STARTAR -->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <!--Sidans största rubrik-->
+            <h2 class="section-heading text-uppercase">Lånekort borde alla ha</h2>
+            <br/>
+            <br/>
+            <!--Frågan-->
+            <h3 class="question">Vilken av följande saker kan du <u>INTE</u> låna med ditt lånekort?</h3>
+            <br/>
+            <br/>
+
+            <!--Förklarande text till frågan-->
+            <p>
+              Om du har ett lånekort finns det massor av olika saker du kan låna med dig hem. Här är en lista
+              på sådana saker, men ett av alternativen är fel. Vilket?
+              <br/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+<!-- DELEN DÄR MAN MATAR IN SITT SVAR STARTAR -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Svar</h2>
+            <h3 class="section-subheading text-muted" id="moveOn">Svara på frågan för att ta dig vidare</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+
+      <!--VILKEN SIDA SKALL LADDAS OM MAN SKRIVIT IN RÄTT SVAR-->
+            <form id="radioForm" novalidate="novalidate" 
+            action="./10lokalsamling.html" 
+            onsubmit="return validateForm()" autocomplete="off">
+              <div class="col-lg-12 text-center">
+                <input type="radio" id="one" name="alternativ" value="alt1" checked="checked">
+                <label for="one" style="color:white; font-size:16px;">
+                  1. Böcker</label><br/>
+
+                <input type="radio" id="two" name="alternativ" value="alt2">
+                <label for="two" style="color:white; font-size:16px;">
+                  2. Filmer</label><br/>
+
+                <input type="radio" id="three" name="alternativ" value="alt3">
+                <label for="three" style="color:white; font-size:16px;">
+                  3. Spel</label><br/>
+
+                <input type="radio" id="four" name="alternativ" value="alt4">
+                <label for="one" style="color:white; font-size:16px;">
+                  4. Ljudböcker (böcker man kan lyssna på)</label><br/>
+
+                <input type="radio" id="five" name="alternativ" value="alt5">
+                <label for="two" style="color:white; font-size:16px;">
+                  5. Sagoväskor</label><br/>
+
+                <input type="radio" id="six" name="alternativ" value="alt6">
+                <label for="three" style="color:white; font-size:16px;">
+                  6. Surfplattor</label><br/>
+
+                <input type="radio" id="seven" name="alternativ" value="alt7">
+                <label for="three" style="color:white; font-size:16px;">
+                  7. Påsar med böcker på andra språk</label><br/>
+
+                <input type="radio" id="eight" name="alternativ" value="alt8">
+                <label for="one" style="color:white; font-size:16px;">
+                  8. E-böcker (böcker du laddar ner och läser digitalt)</label><br/>
+
+                <input type="radio" id="nine" name="alternativ" value="alt9">
+                <label for="two" style="color:white; font-size:16px;">
+                  9. Tidningar</label><br/>
+
+                <input type="radio" id="ten" name="alternativ" value="alt10">
+                <label for="three" style="color:white; font-size:16px;">
+                  10. Musik</label><br/>
+
+                <br/><br/>
+              </div>
+              
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Skicka ditt svar</button>
+              </div>
+
+          </div></form>
+        </div>
+      </div>
+    </div></section>
+
+    <!-- DENNA DEL BESKRIVER INFORMATIONEN SOM VISAS LÄNGST NER PÅ SIDAN -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="copyright">
+              <a href="http://www.bibliotekfh.se/bjuv?refId=xAFq2G&culture=sv" style="font-weight: bold">
+                  Folkbiblioteken i Bjuvs kommun
+              </a>
+            </span>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+    <!-- Filer som denna mall använder läses in -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/agency.min.js"></script>
+    <script src="js/agency.min.js"></script>
+
+    <!--I DENNA DEL BERÄTTAR DU VAD SOM ÄR RÄTT SVAR-->
+    <script>
+    function validateForm() {
+
+      /*Validera svaret på fråga med alternativ. Endast ett alternativ kan väljas åt gången,
+      och endast ett svar är rätt. Övriga svar genererar ett felmeddelande i rött. */
+
+      if (document.forms["radioForm"]["alternativ"].value == "alt6") {
+          return true;
+      }else{
+        document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>Fel, försök igen.</h3>";
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
