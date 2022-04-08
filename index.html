@@ -75,11 +75,10 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
     <meta name="author" content="">
 
   <!--
-  # Genom att ändra denna informationen nedan kan du ge jakten ett eget namn
-  # EX: <title>Ett helt eget namn</title>
-  # Informationen visas inte någonstans på webbsidan utan ändrar det namn som 
-  # webbsidans flik/tabb har då du du surfar till sidan.
-  # 
+  Genom att ändra denna informationen nedan kan du ge jakten ett eget namn
+  EX: <title>Ett helt eget namn</title>
+  Informationen visas inte någonstans på webbsidan utan ändrar det namn som 
+  webbsidans flik/tabb har då du du surfar till sidan.
   -->
 
     <title>Teknikjakten Bjuvs bibliotek</title>
@@ -97,7 +96,6 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
     <link href="css/style.css" rel="stylesheet">
 
   </head>
-
 
   <body id="page-top">
   <!-- Denna del av koden berättar vad menyn skall innehålla -->
@@ -146,26 +144,14 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
+            <!--Sidans största rubrik-->
             <h2 class="section-heading text-uppercase">Jakten kan börja</h2>
-            <!--<h3 class="section-subheading ">ÄNDRA: undertitel?</h3> -->
-
-            <!--<h3>Bakgrundsinformation</h3>-->
-            
-            <!--Ibland kanske du vill lägga till en bild i beskrivningen.
-            I så fall läger du in bilden i katalogen img.
-            Du lägger sedan in följande kod för att berätta att en bild skall visas.
-            Men ersätter bildensnamn med det namn din bild och det filformat din bild har.
-
-            EX:
-            <img src="./img/bildensnamn.filformat">
-            T.ex: <img src="./img/coolbild.jpeg">-->
-
-            <!--<p>Jag har ett uppdrag åt er. Har ni vad som krävs?</p>
-
-            <br />
-            <br />-->
+            <br/>
+            <br/>
+           
+            <!--Frågan-->
             <h3>Jag har ett uppdrag åt er. Har ni vad som krävs?</h3>
-            <!--Här nedan beskriver du vad uppdraget skall vara-->
+            <!--Förklarande text till frågan-->
             <!--<p>
             Det pågår något skumt på Bjuvs bibliotek efter stängningstid. Kanske är bibliotekarierna inblandade.
             Ta reda på när biblioteket stänger på måndagar utan att väcka deras misstankar.
@@ -174,8 +160,6 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
         </div>
       </div>
     </section>
-
- 
     
     <!-- DELEN DÄR MAN MATAR IN SITT SVAR STARTAR -->
     <section id="contact">
@@ -189,15 +173,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
         <div class="row">
           <div class="col-lg-12">
 
-      <!--Du behöver här berätta vilken sida som skall laddas om man löser uppdraget.
-      Just nu är det sidan som heter 2.html som skall laddas.
-      Om vi istället skulle arbeta med uppdrag 2 just så och ändra i filen 2.html skulle vi då alltså
-      istället låta det stå "./3.html" eftersom det då är den sidan som borde laddas.
-
-      Vi kan fortsätta på detta viset och lägga till nya sidor tills dess att vi skapat
-      så många uppdrag vi vill.
-      -->
-
+      <!--VILKEN SIDA SKALL LADDAS OM MAN SVARAT RÄTT-->
             <form id="radioForm" novalidate="novalidate" 
             action="./tavla.html" 
             onsubmit="return validateForm()" autocomplete="off">
@@ -237,10 +213,7 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
       </div>
     </footer>
 
-
-
     <!-- Filer som denna mall använder läses in, du behöver inte ändra något här.-->
-
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -261,13 +234,5 @@ ctrl+f för att snabbt hitta de platser du behöver ändra på.-->
       }
     }
   </script>
-
-  <!--GRATTIS! Du har nu gjort startsidan för din egen teknikjakt! Testa att dubbelklicka på denna fil
-  index.html för att visa sidan i din webbläsare. Fungerar inte  det kan du högerklicka på filen och välja öppna med. Där borde du kunna hitta någon webbläsare som alternativ
-
-  EX: Internet Explorer, Edge, Firefox, Chrome
-
-  Det är nu dags att öppna sidan som heter 2.html och följa instruktionerna där.
-  -->
 </body>
 </html>
