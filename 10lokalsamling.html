@@ -110,10 +110,10 @@
                 <label for="one" style="color:white; font-size:16px;">1. Faktarummet för vuxna</label><br/>
 
                 <input type="radio" id="two" name="alternativ" value="alt2">
-                <label for="two" style="color:white; font-size:16px;">2. Faktarummet för barn</label><br/>
+                <label for="two" style="color:white; font-size:16px;">2. Bjuvsrummet</label><br/>
 
                 <input type="radio" id="three" name="alternativ" value="alt3">
-                <label for="three" style="color:white; font-size:16px;">3. Bjuvsrummet</label><br/>
+                <label for="three" style="color:white; font-size:16px;">3. Faktarummet för barn</label><br/>
                 <br/><br/>
               </div>
               
@@ -157,7 +157,7 @@
       /*Validera svaret på fråga med alternativ. Endast ett alternativ kan väljas åt gången,
       och endast ett svar är rätt. Övriga svar genererar ett felmeddelande i rött. */
 
-      if (document.forms["radioForm"]["alternativ"].value == "alt3") {
+      if (document.forms["radioForm"]["alternativ"].value == "alt2") {
           return true;
       }else{
         document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>Fel, titta efter igen.</h3>";

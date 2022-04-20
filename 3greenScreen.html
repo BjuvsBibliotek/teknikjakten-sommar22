@@ -107,7 +107,7 @@
               <div class="col-lg-12 text-center">
                 <input type="radio" id="one" name="alternativ" value="alt1" checked="checked">
                 <label for="one" style="color:white; font-size:16px;">
-                  1. Skapa spännande filmer och bilder genom att sätta in andra bakgrunder</label><br/>
+                  1. Det är en sorts gräs som man kan ha picknick på</label><br/>
 
                 <input type="radio" id="two" name="alternativ" value="alt2">
                 <label for="two" style="color:white; font-size:16px;">
@@ -115,7 +115,7 @@
 
                 <input type="radio" id="three" name="alternativ" value="alt3">
                 <label for="three" style="color:white; font-size:16px;">
-                  3. Det är en sorts gräs som man kan ha picknick på</label><br/>
+                  3. Skapa spännande filmer och bilder genom att sätta in andra bakgrunder</label><br/>
                 <br/><br/>
               </div>
               
@@ -159,7 +159,7 @@
       /*Validera svaret på fråga med alternativ. Endast ett alternativ kan väljas åt gången,
       och endast ett svar är rätt. Övriga svar genererar ett felmeddelande i rött. */
 
-      if (document.forms["radioForm"]["alternativ"].value == "alt1") {
+      if (document.forms["radioForm"]["alternativ"].value == "alt3") {
           return true;
       }else{
         document.getElementById("moveOn").innerHTML = "<h3 class=section-subheading text-muted style=color:red>Fel, försök igen.</h3>";
