@@ -15,12 +15,14 @@ Används för att läsa och redigera kod. All grön text
 brukar användas för att dokumentera vad olika kodsnuttar
 handlar om och är då till hjälp för att hitta i koden.
 
-- GitHub Desktop
-Används för att publicera ny kod till github.com (push).
-Kan även användas för att hämta hem kod (pull). Användbart
-
-
-
+- GitHub Desktop, github.com
+Github är ett verktyg för att publicera, lagra och slå ihop
+kodfiler. Användbart när flera kodar i samma filer eller man
+kodar på flera datorer. Desktop används för att enkelt ladda
+upp ändrade filer till webb-versionen (push) eller ladda hem
+eventuella ändringar till datorn (pull). Inlogg finns i
+I:mappen. Kopplad till Bjuvs lånediskmejl, med Bjuvs gmail
+som reserv.
 
 Alla filer ligger på datorn närmast dörren ut till
 själva biblioteket (Catarinas ände av kontoret).
